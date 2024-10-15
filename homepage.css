@@ -1,0 +1,230 @@
+/* Global Styles */
+body {
+  font-family: 'Sono', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Header Styles */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed; /* Keep the header fixed */
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure it stays on top */
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.header-left .company-name {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.header-right nav {
+  display: flex;
+  gap: 20px;
+}
+
+.header-right nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.header-right nav a:hover {
+  text-decoration: underline;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  position: relative; /* Use relative positioning for footer */
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-container p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* Pricing Section */
+.pricing-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 20px;
+  margin: 100px 0; /* Added margin to push down the pricing section */
+}
+
+.pricing-plan {
+  flex: 1;
+  max-width: 400px;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.plan-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.plan-price {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.plan-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.plan-features li {
+  margin-bottom: 15px;
+}
+
+.plan-button {
+  padding: 10px 20px;
+  background-color: #ff6600;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.plan-button:hover {
+  background-color: #e65c00;
+}
+
+/* Responsive Styles for different screen sizes */
+
+/* Max-width: 1199px (for small desktops or large tablets) */
+@media (max-width: 1199px) {
+  .pricing-container {
+      flex-direction: row;
+  }
+  .pricing-plan {
+      max-width: 350px;
+  }
+}
+
+/* Max-width: 1023px (for tablets) */
+@media (max-width: 1023px) {
+  .pricing-container {
+      flex-direction: column;
+  }
+  .pricing-plan {
+      max-width: 300px;
+      margin: 10px 0;
+  }
+  .header-container {
+      flex-direction: column;
+  }
+  .header-right {
+      margin-top: 10px;
+  }
+  .header-right nav a {
+      font-size: 0.9rem;
+  }
+  .plan-price {
+    font-size: 30px;
+  }
+}
+
+/* Max-width: 900px (for large mobile devices) */
+@media (max-width: 900px) {
+  .header-right nav {
+      gap: 15px;
+  }
+  .plan-title {
+      font-size: 20px;
+  }
+  .plan-price {
+      font-size: 36px;
+  }
+  
+}
+
+/* Max-width: 767px (for mobile devices) */
+@media (max-width: 767px) {
+  /* Pricing Section */
+  .pricing-container {
+      flex-direction: column;
+  }
+
+  .pricing-plan {
+      max-width: 100%;
+      margin: 10px 0;
+  }
+
+  /* Header Section */
+  .header-container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .header-left {
+      margin-bottom: 10px;
+  }
+
+  .header-right nav {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+  }
+
+  .header-right nav a {
+      font-size: 0.9rem;
+  }
+}
+
+/* Max-width: 500px (for smaller mobile devices) */
+@media (max-width: 500px) {
+  .header-left .company-name {
+      font-size: 1.5rem;
+  }
+  
+  .header-right nav a {
+      font-size: 0.8rem;
+  }
+
+  .plan-button {
+      padding: 8px 16px;
+      font-size: 14px;
+  }
+  
+  .plan-title {
+      font-size: 18px;
+  }
+  
+  .plan-price {
+      font-size: 32px;
+  }
+}
